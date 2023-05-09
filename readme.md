@@ -13,6 +13,7 @@ This is a simple API that allows users to convert a video file into different fo
 - JDK 17 
 - Gradle
 - FFmpeg installed and available in the PATH
+- On a CI/CD pipeline, the VMs running the build should have FFmpeg installed
 
 
 ## Configuration
@@ -28,6 +29,6 @@ converted-video.path=/path/to/your/input/video/file
 To convert a video, make a GET request to the `/api/convert` endpoint with the desired output format specified in the `Accept` header:
 
 ```bash
-curl -H "Accept: video/mkv" http://localhost:8080/api/convert --output output.mkv
+curl -H "Accept: mkv" http://localhost:8080/api/convert --output output.mkv
 ```
 
