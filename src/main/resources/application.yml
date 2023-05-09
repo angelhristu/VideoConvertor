@@ -1,0 +1,11 @@
+converted-video:
+  path: videos/probe.mp4
+
+resilience4j:
+  ratelimiter:
+    instances:
+      convertVideo:
+        limitForPeriod: 10
+        limitRefreshPeriod: 5s
+        timeoutDuration: 0
+        registerHealthIndicator: true
